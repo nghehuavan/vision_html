@@ -4,8 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "npx gulp",
-    "start": "live-server .",
-    "build": "echo skip !!"
+    "start": "live-server ."
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",
