@@ -1,0 +1,48 @@
+.select-wrapper {
+  margin-top: 16px;
+
+  .select-block {
+    height: auto;
+
+    .banner-msg-header {
+      padding: 16px;
+      margin: 16px 16px 0px 16px;
+      background-color: $white;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      .banner-msg-bubble {
+        background: url(../images/icons/message.svg) no-repeat;
+        background-size: contain;
+        width: 48px;
+        height: 54px;
+        font-weight: 700;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        .text {
+          margin-top: 9px;
+          font-size: 10.91px;
+          line-height: 10.91px;
+        }
+        .number {
+          font-size: 17.45px;
+          line-height: 17.45px;
+        }
+      }
+
+      .banner-msg-header-content {
+        margin: 0px 38px 0px 38px;
+        font-size: 15px;
+      }
+    }
+
+    .banner-msg-footer {
+      padding: 16px;
+      margin: 0px 16px 16px 16px;
+      background-color: $white;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+}

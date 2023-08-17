@@ -1,0 +1,16 @@
+{
+  "name": "html-sass-js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx gulp",
+    "start": "npx gulp",
+    "build": "echo skip !!"
+  },
+  "dependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.64.2"
+  }
+}

@@ -1,0 +1,94 @@
+.error-page-wrapper {
+  padding: 16px;
+
+  .img-container {
+    padding-bottom: 16px;
+
+    .img-content {
+      width: 190px;
+      height: 130px;
+      border-radius: 8px;
+      border: 2px solid $bk-100;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.30) 100%), lightgray 50% / cover no-repeat;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .up-faild-text {
+    text-align: center;
+    color: $bk-100;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 12px;
+
+    @include breakpoint(sm, max) {
+      font-size: 16px;
+    }
+  }
+
+  .try-again-text {
+    text-align: center;
+    color: $bk-100;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 16px;
+  }
+
+  .notice-size-upload {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 16px;
+
+    div {
+      width: auto;
+      text-align: center;
+      border-radius: 8px;
+      color: $bk-100;
+      text-shadow: 0.72px 0.72px 0px rgba(255, 255, 255, 0.70);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      background-color: rgba(243, 204, 0, 0.10);
+      padding: 24px 64px;
+    }
+  }
+
+  .btn-open-file {
+
+    >button {
+      height: 48px;
+    }
+  }
+}
+
+.btn-back-top {
+  text-decoration: none;
+  margin-bottom: 25px;
+  width: 100%;
+  background-color: $greykest;
+  color: $bk-100;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 16px 0;
+
+  img {
+    margin-right: 10px;
+    margin-bottom: -1px;
+
+    @include breakpoint(sm, max) {
+      margin-right: 6px;
+    }
+  }
+
+  .btn-back-404-content {
+    cursor: pointer;
+  }
+}

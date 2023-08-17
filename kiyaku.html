@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="./plugins/owl/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./plugins/owl/css/owl.theme.default.min.css">
+  <script src="./plugins/jquery/jquery-3.7.0.min.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WZJVKG');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body class="bg-cementlight" onload="loadToppage()">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJVKG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <main class="container-main">
+    <div class="logo-md">
+      <img src="./images/toppage/georgia-logo.png" alt="">
+    </div>
+    <div class="container-slider">
+      <div id="slider-common">
+        <div class="owl-carousel owl-theme">
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-1.jpg">
+          </div>
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-2.jpg">
+          </div>
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-3.jpg">
+          </div>
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-4.jpg">
+          </div>
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-5.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-app container position-reative">
+      <section class="title-container d-flex justify-between align-center">
+        <p class="mt-0 mb-0">キングダムフレームメーカー(ロゴ)</p>
+        <button class="btn-help" type="button" onclick="openModal('#guide-play')">
+          <span>遊び方</span>
+        </button>
+      </section>
+      <!-- Modal age -->
+      <div id="modal-age" class="modal">
+        <div id="modal-dialog" class="modal-dialog modal-center">
+          <div class="modal-content content-age">
+            <div class="modal-header d-flex justify-center">
+              <p class="modal-title m-0 title-age">年齢認証</p>
+            </div>
+            <div class="modal-body body-age">
+              <div class="body-age-select">
+                <p class="m-0">
+                  <a href="kiyaku.html">利用規約</a>
+                  をご確認のうえ
+                </p>
+                <p class="m-0">年齢を設定してください。</p>
+                <div class="select-age d-flex position-reative">
+                  <select id="selected-age">
+                    <option value="0">年齢</option>
+                  </select>
+                </div>
+                <p class="m-0">※一度ご登録いただいた情報は変更</p>
+                <p class="m-0">できませんのでご注意ください。</p>
+              </div>
+              <div class="flex-column justify-center align-center body-age-warning">
+                <p class="m-0">残念ですが、</p>
+                <p class="m-0">条件を満たしていないため、</p>
+                <p class="m-0">本コンテンツを</p>
+                <p class="m-0">ご利用いただけません。</p>
+                <a class="d-flex justify-center align-center mt-1 age-modal-link" href="#" target="_blank" title="">ジョージア<br>ブランドサイトTOPへ</a>
+              </div>
+            </div>
+            <div class="modal-footer footer-age">
+              <button type="button" class="btn btn-confirm-age" onclick="handleConfirmAge()">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal guide play -->
+      <div id="guide-play" class="modal">
+        <div id="modal-dialog" class="modal-dialog modal-center">
+          <div class="modal-content content-guide">
+            <div class="modal-header d-flex justify-center align-center header-guide">
+              <img src="./images/toppage/guide-text.png" alt="">
+            </div>
+            <div class="modal-body body-guide d-flex flex-column align-center">
+              <div class="step-guide-block d-flex align-center justify-center">
+                <div class="step-number">1</div>
+                <p class="m-0">キングダムのコマを選択</p>
+              </div>
+              <img src="./images/icons/arrow-down-light.svg" alt="">
+              <div class="step-guide-block d-flex align-center justify-center">
+                <div class="step-number">2</div>
+                <p class="m-0">写真をアップロード</p>
+              </div>
+              <img src="./images/icons/arrow-down-light.svg" alt="">
+              <div class="step-guide-block d-flex align-center justify-center">
+                <div class="step-number">3</div>
+                <p class="m-0">写真の位置・サイズなどを調整</p>
+              </div>
+              <img src="./images/icons/arrow-down-light.svg" alt="">
+              <div class="step-guide-block d-flex align-center justify-center">
+                <div class="step-number">4</div>
+                <p class="m-0">完成</p>
+              </div>
+            </div>
+            <div class="modal-footer footer-guide">
+              <button type="button" class="btn btn-primary rounded btn-sm" onclick="closeModal('#guide-play')">閉じる</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./plugins/owl/js/owl.carousel.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/modal.js"></script>
+</body>
+</html>

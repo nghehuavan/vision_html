@@ -1,0 +1,30 @@
+.checkbox {
+  padding: 0 !important;
+  min-height: 16px;
+  cursor: pointer;
+  border: none;
+  color: $darkest;
+  font-size: 12px;
+  font-weight: 600;
+  padding-left: 22px !important;
+  position: relative;
+  background-color: transparent;
+  transition: all 0.1s;
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0;
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url(../images/common/checkbox-off.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+  }
+  &.checked {
+    &::after {
+      background-image: url(../images/common/checkbox-on.png);
+    }
+  }
+}

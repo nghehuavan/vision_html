@@ -1,0 +1,224 @@
+@keyframes fadeInZoomMsg1 {
+	0% {
+    opacity: 0;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    background-image: url(../images/toppage/message-1.png);
+	}
+  20%, 40% {
+    opacity: 1;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    background-image: url(../images/toppage/message-1.png);
+	}
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: url(../images/toppage/message-1.png);
+  }
+}
+
+@keyframes fadeInZoomMsg2 {
+	0% {
+    opacity: 0;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    background-image: url(../images/toppage/message-2.png);
+	}
+  20% , 40% {
+    opacity: 1;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    background-image: url(../images/toppage/message-2.png);
+	}
+  60%, 80%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: url(../images/toppage/message-2.png);
+  }
+}
+
+@keyframes scrollRTL {
+  0% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-224px * 5);
+    -webkit-transform: translateX(-224px * 5);
+  }
+}
+
+@keyframes scrollLTR {
+  0% {
+    transform: translateX(-224px * 5);
+    -webkit-transform: translateX(-224px * 5);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+	}
+  40% {
+    opacity: 1;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+	}
+  60% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+	}
+  80% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+	}
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes textTransform {
+  0% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    background-image: url(../images/toppage/onomatope1.png);
+  }
+  5% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope1.png);
+  }
+  8% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope1.png);
+  }
+  10% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: url(../images/toppage/onomatope1.png);
+  }
+  20% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: none;
+  }
+  21% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    background-image: url(../images/toppage/onomatope2.png);
+  }
+  25% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope2.png);
+  }
+  28% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope2.png);
+  }
+  30% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: url(../images/toppage/onomatope2.png);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: none;
+  }
+  41% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    background-image: url(../images/toppage/onomatope3.png);
+  }
+  45% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope3.png);
+  }
+  48% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope3.png);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: url(../images/toppage/onomatope3.png);
+  }
+  60% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: none;
+  }
+  61% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    background-image: url(../images/toppage/onomatope4.png);
+  }
+  65% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope4.png);
+  }
+  68% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope4.png);
+  }
+  70% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: url(../images/toppage/onomatope4.png);
+  }
+  80% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: none;
+  }
+  81% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    background-image: url(../images/toppage/onomatope5.png);
+  }
+  85% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope5.png);
+  }
+  88% {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    background-image: url(../images/toppage/onomatope5.png);
+  }
+  90% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: url(../images/toppage/onomatope5.png);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    background-image: none;
+  }
+}

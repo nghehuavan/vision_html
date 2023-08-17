@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./plugins/owl/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./plugins/owl/css/owl.theme.default.min.css" />
+    <script src="./plugins/jquery/jquery-3.7.0.min.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WZJVKG');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="bg-cementlight">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJVKG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <main class="container-main">
+      <div class="logo-md">
+        <img src="./images/toppage/georgia-logo.png" alt="" />
+      </div>
+      <div class="container-slider">
+        <div id="slider-common">
+          <div class="owl-carousel owl-theme">
+            <div class="slider-item d-flex justify-center align-center">
+              <img src="./images/common/slider/slider-1.jpg" />
+            </div>
+            <div class="slider-item d-flex justify-center align-center">
+              <img src="./images/common/slider/slider-2.jpg" />
+            </div>
+            <div class="slider-item d-flex justify-center align-center">
+              <img src="./images/common/slider/slider-3.jpg" />
+            </div>
+            <div class="slider-item d-flex justify-center align-center">
+              <img src="./images/common/slider/slider-4.jpg" />
+            </div>
+            <div class="slider-item d-flex justify-center align-center">
+              <img src="./images/common/slider/slider-5.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-app container frame-container">
+        <section class="title-container d-flex justify-between align-center">
+          <p class="mt-0 mb-0 text-danger">※ロゴに差し替え</p>
+          <button
+            class="btn-help"
+            type="button"
+            onclick="openModal('#guide-play')"
+          >
+            <span>遊び方</span>
+          </button>
+        </section>
+        <div class="error-page-wrapper">
+          <div class="img-container d-flex justify-center">
+            <div class="img-content">
+              <img src="./images/error/pic-primary.png" alt="" />
+            </div>
+          </div>
+          <div class="up-faild-text">
+            アップロードできませんでした！ <br />
+            もう一度試してください。
+          </div>
+          <div class="try-again-text">
+            以下の条件を満たしていますか？ <br />
+            条件を満たさない場合は別の写真でためしてください。
+          </div>
+          <div class="notice-size-upload">
+            <div>
+              サイズ640×640px以上 <br />
+              容量5MB以内 <br />
+              形式jpg,png推奨 <br />
+            </div>
+          </div>
+          <div class="btn-open-file">
+            <button
+              class="btn btn-primary btn-sm w-100 rounded text-shadow"
+              id="btn-file"
+              type="button"
+              onclick="history.back()"
+            >
+              写真を選び直す
+            </button>
+            <input type="file" id="input-file" />
+          </div>
+        </div>
+        <a href="/" class="btn-back-top d-flex justify-center align-center">
+          <img src="./images/icons/arrow-left-rotate.svg" />
+          <span>TOPに戻る</span>
+        </a>
+      </div>
+    </main>
+    <!-- Modal Guide play -->
+    <div id="guide-play" class="modal">
+      <div id="modal-dialog" class="modal-dialog modal-center">
+        <div class="modal-content content-guide">
+          <div class="modal-header d-flex justify-center align-center header-guide">
+            <img src="./images/toppage/guide-text.png" alt="">
+          </div>
+          <div class="modal-body body-guide d-flex flex-column align-center">
+            <div class="step-guide-block d-flex align-center justify-center">
+              <div class="step-number">1</div>
+              <p class="m-0">キングダムのコマを選択</p>
+            </div>
+            <img src="./images/icons/arrow-down-light.svg" alt="">
+            <div class="step-guide-block d-flex align-center justify-center">
+              <div class="step-number">2</div>
+              <p class="m-0">写真をアップロード</p>
+            </div>
+            <img src="./images/icons/arrow-down-light.svg" alt="">
+            <div class="step-guide-block d-flex align-center justify-center">
+              <div class="step-number">3</div>
+              <p class="m-0">写真の位置・サイズなどを調整</p>
+            </div>
+            <img src="./images/icons/arrow-down-light.svg" alt="">
+            <div class="step-guide-block d-flex align-center justify-center">
+              <div class="step-number">4</div>
+              <p class="m-0">完成</p>
+            </div>
+          </div>
+          <div class="modal-footer footer-guide">
+            <button type="button" class="btn btn-primary rounded btn-sm" onclick="closeModal('#guide-play')">閉じる</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./plugins/owl/js/owl.carousel.min.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

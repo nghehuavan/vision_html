@@ -1,0 +1,97 @@
+.logo-404-page {
+  height: 100%;
+}
+
+.page-404-container {
+  position: relative;
+  height: 100vh;
+
+  .page-404-text {
+    height: 82%;
+    background-color: $cement-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >.logo-main-404 {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15vh;
+
+      >img {
+        @include breakpoint(sm, max) {
+          width: 80%;
+        }
+      }
+
+      @include breakpoint(lg, max) {
+        margin-top: 5vh;
+      }
+    }
+
+    >.text {
+      padding: 50px 0 100px 0;
+      color: #1A0D0D;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+
+      @include breakpoint(lg, max) {
+        font-size: 14px;
+        padding: 40px 0 50px 0;
+      }
+    }
+
+    @include breakpoint(lg, max) {
+      height: 65%;
+    }
+  }
+
+  .btn-back-404 {
+    img {
+      margin-right: 10px;
+      margin-bottom: -1px;
+
+      @include breakpoint(sm, max) {
+        margin-right: 6px;
+      }
+
+    }
+    .btn-back-404-content {
+      cursor: pointer;
+    }
+    text-decoration: none;
+    margin-bottom: 25px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $cement-light;
+    color: #1A0D0D;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 15px 0;
+
+    @include breakpoint(lg, max) {
+      position: relative;
+      margin-bottom: 0;
+      margin-top: 25px;
+    }
+
+    @include breakpoint(sm, max) {
+      font-size: 16px;
+    }
+  }
+
+  @include breakpoint(lg, max) {
+    background-color: $cement-light;
+  }
+
+  @include breakpoint(sm, max) {
+    background-color: $white;
+  }
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="./plugins/owl/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./plugins/owl/css/owl.theme.default.min.css">
+  <script src="./plugins/jquery/jquery-3.7.0.min.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WZJVKG');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body class="bg-cementlight" onload="onLoadFrameMessage()">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZJVKG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <main class="container-main">
+    <div class="logo-md">
+      <img src="./images/toppage/georgia-logo.png" alt="">
+    </div>
+    <div class="container-slider">
+      <div id="slider-common">
+        <div class="owl-carousel owl-theme">
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-1.jpg">
+          </div>
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-2.jpg">
+          </div>
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-3.jpg">
+          </div>
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-4.jpg">
+          </div>
+          <div class="slider-item d-flex justify-center align-center">
+            <img src="./images/common/slider/slider-5.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-app container frame-container">
+      <section class="title-container d-flex justify-between align-center">
+        <div class="title-logo">
+          <a href="index.html">
+            <img src="./images/frame-logo.png" alt="frame-logo"/>
+          </a>
+        </div>
+        <button class="btn-help" type="button" onclick="openModal('#guide-play')">
+          <span>遊び方</span>
+        </button>
+      </section>
+      <div class="message-wrapper">
+        <div class="frame-zone">
+          <!-- Example Image -->
+          <div class="frame-example" id="frame-example">
+            <img src="" id="img-exam" alt="" class="d-none" />
+            <canvas id="canvas" class="canvas" width="1200" height="900"></canvas>
+          </div>
+          <div class="frame-step" id="frame-step">
+            <br />
+            <div class="frame-step-item" id="step1">
+              <p class="label d-flex align-center mt-0">
+                <span class="icon icon-text">1</span>
+                <span class="icon icon-tick d-none"></span>
+                キングダムのシーンを選択
+              </p>
+              <button
+                class="btn btn-primary btn-sm w-100 rounded button-fr text-shadow"
+                type="button"
+                onClick="openModal('#modal-frame')"
+              >
+                選択
+              </button>
+            </div>
+            <br />
+            <div class="frame-step-item" id="step2">
+              <p class="label d-flex align-center mt-0">
+                <span class="icon icon-text">2</span>
+                <span class="icon icon-tick d-none"></span>
+                写真をアップロード
+              </p>
+              <div class="position-reative">
+                <div class="d-flex wrapper-btn-file">
+                  <button class="btn btn-primary btn-sm w-100 rounded text-shadow" id="btn-file" type="button" onclick="openFile()">アップロード</button>
+                  <button class="btn btn-outline-primary btn-sm rounded d-none" id="btn-edit" type="button">調整</button>
+                </div>
+                <input type="file" id="input-file" />
+              </div>
+            </div>
+            <p class="notice mb-0 mt-0">サイズ 640 × 640px 以上、容量 5MB 以内の写真をアップしてください。形式jpg,png推奨。</p>
+            <br />
+            <button type="button" class="btn btn-primary btn-lg rounded w-100 text-shadow" id="btn-confirm" disabled onclick="finalStep()">完成</button>
+          </div>
+        </div>
+        <div class="frame-edit d-none" id="frame-edit">
+          <div class="nav-pill">
+            <ul class="nav-tabs" id="nav-tabs">
+              <li class="move active" data-edit="move">位置調整</li>
+              <li class="resize" data-edit="resize">サイズ変更</li>
+              <li class="rotate" data-edit="rotate">回転・反転</li>
+            </ul>
+          </div>
+          <div class="nav-content" id="nav-content">
+            <div class="move-content nav-content-item active" id="move">
+              <div class="btn-wrapper">
+                <button class="btn-icon bg-primary icon-arrow-left" onclick="newdrawCanvas.moveX(-1)"
+                  type="button"></button>
+                <button class="btn-icon bg-primary icon-arrow-up" onclick="newdrawCanvas.moveY(-1)"
+                  type="button"></button>
+                <button class="btn-icon bg-primary icon-arrow-right" onclick="newdrawCanvas.moveX(1)"
+                  type="button"></button>
+                <button class="btn-icon bg-primary icon-arrow-down" onclick="newdrawCanvas.moveY(1)"
+                  type="button"></button>
+                <div class="check-wrapper">
+                  <button class="checkbox btn-check" id="btn-check-move"
+                    onclick="handleCheck('#btn-check-move', newdrawCanvas.changeMoveBase)">10倍モード</button>
+                </div>
+              </div>
+            </div>
+            <div class="resize-content nav-content-item" id="resize">
+              <div class="input-wrapper">
+                <button class="btn-scale bg-white icon-scale-up" type="button"></button>
+                <button class="btn-scale bg-white icon-scale-down" type="button"></button>
+                <input class="input-range" type="range" min="0.5" max="1.5" step="0.1"
+                  onchange="newdrawCanvas.scaleImage(this.value)" />
+              </div>
+            </div>
+            <div class="rotate-content nav-content-item" id="rotate">
+              <div class="d-flex">
+                <div class="item-rotate">
+                  <p class="title">回転</p>
+                  <div class="d-flex">
+                    <button class="btn-icon bg-primary icon-rotate-left me-1"
+                      onclick="newdrawCanvas.rotate(-Math.PI/360)" type="button"></button>
+                    <button class="btn-icon bg-primary icon-rotate-right" onclick="newdrawCanvas.rotate(Math.PI/360)"
+                      type="button"></button>
+                  </div>
+                  <button class="checkbox btn-check mt-1" id="btn-check-rotate"
+                    onclick="handleCheck('#btn-check-rotate', newdrawCanvas.changeRotateBase)">10倍モード</button>
+                </div>
+                <div class="item-rotate">
+                  <p class="title">反転</p>
+                  <div class="d-flex">
+                    <button class="btn-icon bg-primary icon-flip-h me-1" onclick="newdrawCanvas.flipH()"
+                      type="button"></button>
+                    <button class="btn-icon bg-primary icon-flip-v" onclick="newdrawCanvas.flipV()"
+                      type="button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-edit-footer d-flex justify-between d-none" id="frame-edit-footer">
+          <button class="btn btn-outline-primary rounded" onclick="newdrawCanvas.resetCanvas(resetData)"
+            type="button">キャンセル</button>
+          <button class="btn btn-primary rounded text-shadow" type="button" onclick="finalStep()">保存</button>
+        </div>
+      </div>
+      </section>
+    </div>
+    </div>
+  </main>
+  <!-- Modal frame message -->
+  <div id="modal-frame" class="modal" data-backdrop="static">
+    <div id="modal-dialog" class="modal-dialog modal-center">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="temp"></div>
+          <p class="title m-0">キングダムのシーンを選択</p>
+          <div>
+            <button class="btn-close" type="button" onclick="closeModal('#modal-frame')"></button>
+          </div>
+        </div>
+        <div class="modal-body body-age">
+          <div class="content-frame" id="content-frame">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal age -->
+  <div id="modal-age" class="modal">
+    <div id="modal-dialog" class="modal-dialog modal-center">
+      <div class="modal-content content-age">
+        <div class="modal-header d-flex justify-center">
+          <p class="modal-title m-0 title-age">年齢認証</p>
+        </div>
+        <div class="modal-body body-age">
+          <div class="body-age-select">
+            <p class="m-0">
+              <a href="kiyaku.html">利用規約</a>
+              をご確認のうえ
+            </p>
+            <p class="m-0">年齢を設定してください。</p>
+            <div class="select-age d-flex position-reative">
+              <select id="selected-age">
+                <option value="0">年齢</option>
+              </select>
+            </div>
+            <p class="m-0">※一度ご登録いただいた情報は変更</p>
+            <p class="m-0">できませんのでご注意ください。</p>
+          </div>
+          <div class="flex-column justify-center align-center body-age-warning">
+            <p class="m-0">残念ですが、</p>
+            <p class="m-0">条件を満たしていないため、</p>
+            <p class="m-0">本コンテンツを</p>
+            <p class="m-0">ご利用いただけません。</p>
+            <a class="d-flex justify-center align-center mt-1 age-modal-link" href="#" target="_blank" title="">ジョージア<br>ブランドサイトTOPへ</a>
+          </div>
+        </div>
+        <div class="modal-footer footer-age">
+          <button type="button" class="btn btn-confirm-age" onclick="handleConfirmAge()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Guide play -->
+  <div id="guide-play" class="modal">
+    <div id="modal-dialog" class="modal-dialog modal-center">
+      <div class="modal-content content-guide">
+        <div class="modal-header d-flex justify-center align-center header-guide">
+          <img src="./images/toppage/guide-text.png" alt="">
+        </div>
+        <div class="modal-body body-guide d-flex flex-column align-center">
+          <div class="step-guide-block d-flex align-center justify-center">
+            <div class="step-number">1</div>
+            <p class="m-0">キングダムのコマを選択</p>
+          </div>
+          <img src="./images/icons/arrow-down-light.svg" alt="">
+          <div class="step-guide-block d-flex align-center justify-center">
+            <div class="step-number">2</div>
+            <p class="m-0">写真をアップロード</p>
+          </div>
+          <img src="./images/icons/arrow-down-light.svg" alt="">
+          <div class="step-guide-block d-flex align-center justify-center">
+            <div class="step-number">3</div>
+            <p class="m-0">写真の位置・サイズなどを調整</p>
+          </div>
+          <img src="./images/icons/arrow-down-light.svg" alt="">
+          <div class="step-guide-block d-flex align-center justify-center">
+            <div class="step-number">4</div>
+            <p class="m-0">完成</p>
+          </div>
+        </div>
+        <div class="modal-footer footer-guide">
+          <button type="button" class="btn btn-primary rounded btn-sm" onclick="closeModal('#guide-play')">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./plugins/owl/js/owl.carousel.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/canvas.js"></script>
+  <script src="./js/frame-message.js"></script>
+</body>
+</html>
