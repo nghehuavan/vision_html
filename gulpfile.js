@@ -15,7 +15,7 @@ gulp.task('serve', function () {
   });
 
   // Watch for build
-  gulp.watch(['./**/*.html'], gulp.series('include-html'));
+  gulp.watch(['./**/*.html', '!dist/**/*'], gulp.series('include-html'));
   gulp.watch(['./sass/**/*.scss'], gulp.series('compile-sass'));
   gulp.watch(['./images/**/*'], gulp.series('copy-images'));
   gulp.watch(['./js/**/*'], gulp.series('copy-js'));
