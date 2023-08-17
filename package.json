@@ -12,5 +12,11 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.64.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.64.2"
   }
 }
