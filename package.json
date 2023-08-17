@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "npx gulp",
-    "start": "npx gulp",
+    "start": "live-server .",
     "build": "echo skip !!"
   },
   "devDependencies": {
@@ -12,5 +12,8 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.64.2"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }
